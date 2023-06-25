@@ -476,5 +476,510 @@ let productosAComprar = [
     nombre: "Empanadas de pollo", 
     marca: "Delicias Caseras", 
     categoria: "Congelados", 
-    precio: '$ 200' },
+    precio: '$ 200' 
+  },
+  {
+    id: 70,
+    nombre: "Salame", 
+    marca: "Tradizione", 
+    categoria: "Fiambrería", 
+    precio: '$ 180' 
+  },
+  {
+    id: 71,
+    nombre: "Jamón cocido", 
+    marca: "Delicioso", 
+    categoria: "Fiambrería", 
+    precio: '$ 250' 
+  },
+  {
+    id: 72,
+    nombre: "Chorizo", 
+    marca: "Sabroso", 
+    categoria: "Fiambrería", 
+    precio: '$ 210' 
+  },
+  {
+    id: 73,
+    nombre: "Mortadela", 
+    marca: "Casera", 
+    categoria: "Fiambrería", 
+    precio: '$ 190' 
+  },
+  {
+    id: 74,
+    nombre: "Lomo ahumado", 
+    marca: "Premium", 
+    categoria: "Fiambrería", 
+    precio: '$ 320' 
+  },
+  {
+    id: 75,
+    nombre: "Salchichón", 
+    marca: "Artesanal", 
+    categoria: "Fiambrería", 
+    precio: '$ 280' 
+  },
+  {
+    id: 76,
+    nombre: "Jamoncitos", 
+    marca: "Gourmet", 
+    categoria: "Fiambrería", 
+    precio: '$ 350' 
+  },
+  {
+    id: 77,
+    nombre: "Pepperoni", 
+    marca: "Delicia Italiana", 
+    categoria: "Fiambrería", 
+    precio: '$ 230' 
+  },
+  {
+    id: 78,
+    nombre: "Longaniza", 
+    marca: "Tradicional", 
+    categoria: "Fiambrería", 
+    precio: '$ 240' 
+  },
+  {
+    id: 79,
+    nombre: "Salchichas", 
+    marca: "Saborosa", 
+    categoria: "Fiambrería", 
+    precio: '$ 200' 
+  },
+  {
+    id: 80,
+    nombre: "Pastrón", 
+    marca: "Kosher Deli", 
+    categoria: "Fiambrería", 
+    precio: '$ 290' 
+  },
+  {
+    id: 81,
+    nombre: "Fuet", 
+    marca: "Exquisito", 
+    categoria: "Fiambrería", 
+    precio: '$ 260' 
+  },
+  {
+    id: 82,
+    nombre: "Sopressata", 
+    marca: "Auténtica", 
+    categoria: "Fiambrería", 
+    precio: '$ 270' 
+  },
+  {
+    id: 83,
+    nombre: "Salami picante", 
+    marca: "Fuego", 
+    categoria: "Fiambrería", 
+    precio: '$ 240' 
+  },
+  {
+    id: 84,
+    nombre: "Mortadela de pollo", 
+    marca: "Saludable", 
+    categoria: "Fiambrería", 
+    precio: '$ 200' 
+  },
+  {
+    id: 85,
+    nombre: "Chistorra", 
+    marca: "Vasco", 
+    categoria: "Fiambrería", 
+    precio: '$ 280' 
+  },
+  {
+    id: 86,
+    nombre: "Bacon ahumado", 
+    marca: "Ahumado Master", 
+    categoria: "Fiambrería", 
+    precio: '$ 300' 
+  },
+  {
+    id: 87,
+    nombre: "Coppa", 
+    marca: "Delizioso", 
+    categoria: "Fiambrería", 
+    precio: '$ 310' 
+  },
+  {
+    id: 88,
+    nombre: "Manzana",
+    marca: 'El kg.', 
+    categoria: "FrutasYVerduras", 
+    precio: '$ 120' 
+  },
+  {
+    id: 89,
+    nombre: "Banana",
+    marca: 'El kg.',  
+    categoria: "FrutasYVerduras", 
+    precio: '$ 80' 
+  },
+  {
+    id: 90,
+    nombre: "Naranja",
+    marca: 'El kg.',  
+    categoria: "FrutasYVerduras", 
+    precio: '$ 70' 
+  },
+  {
+    id: 91,
+    nombre: "Pera", 
+    marca: 'El kg.',
+    categoria: "FrutasYVerduras", 
+    precio: '$ 100' 
+  },
+  {
+    id: 92,
+    nombre: "Sandía", 
+    marca: 'El kg.',
+    categoria: "FrutasYVerduras", 
+    precio: '$ 150' 
+  },
+  {
+    id: 93,
+    nombre: "Melón",
+    marca: 'El kg.', 
+    categoria: "FrutasYVerduras", 
+    precio: '$ 120' 
+  },
+  {
+    id: 94,
+    nombre: "Uva", 
+    marca: 'El kg.',
+    categoria: "FrutasYVerduras", 
+    precio: '$ 180' 
+  },
+  {
+    id: 95,
+    nombre: "Plátano",
+    marca: 'El kg.', 
+    categoria: "FrutasYVerduras", 
+    precio: '$ 90' 
+  },
+  {
+    id: 96,
+    nombre: "Kiwi", 
+    marca: 'El kg.',
+    categoria: "FrutasYVerduras", 
+    precio: '$ 110' 
+  },
+  {
+    id: 97,
+    nombre: "Durazno",
+    marca: 'El kg.',
+    categoria: "FrutasYVerduras", 
+    precio: '$ 130' 
+  },
+  {
+    id: 98,
+    nombre: "Mandarina", 
+    marca: 'El kg.',
+    categoria: "FrutasYVerduras", 
+    precio: '$ 90' 
+  },
+  {
+    id: 99,
+    nombre: "Lechuga",
+    marca: 'El kg.', 
+    categoria: "FrutasYVerduras", 
+    precio: '$ 60' 
+  },
+  {
+    id: 100, 
+    nombre: "Tomate",
+    marca: 'El kg.', 
+    categoria: "FrutasYVerduras", 
+    precio: '$ 80' 
+  },
+  {
+    id: 101, 
+    nombre: "Zanahoria",
+    marca: 'El kg.', 
+    categoria: "FrutasYVerduras", 
+    precio: '$ 70' 
+  },
+  {
+    id: 102,
+    nombre: "Pimiento",
+    marca: 'El kg.', 
+    categoria: "FrutasYVerduras", 
+    precio: '$ 90' 
+  },
+  {
+    id: 103, 
+    nombre: "Espinaca",
+    marca: 'El kg.', 
+    categoria: "FrutasYVerduras", 
+    precio: '$ 60' 
+  },
+  {
+    id: 104, 
+    nombre: "Brocoli",
+    marca: 'El kg.', 
+    categoria: "FrutasYVerduras", 
+    precio: '$ 80' 
+  },
+  {
+    id: 105, 
+    nombre: "Cebolla",
+    marca: 'El kg.', 
+    categoria: "FrutasYVerduras", 
+    precio: '$ 50' 
+  },
+  { 
+    id: 106, 
+    nombre: "Detergente líquido", 
+    marca: "Ariel", 
+    categoria: "Limpieza", 
+    precio: "$150" 
+  },
+  { 
+    id: 107, 
+    nombre: "Limpiavidrios", 
+    marca: "Windex", 
+    categoria: "Limpieza", 
+    precio: "$80" 
+  },
+  { 
+    id: 108, 
+    nombre: "Jabón en barra", 
+    marca: "Dove", 
+    categoria: "Limpieza", 
+    precio: "$50" 
+  },
+  { 
+    id: 109, 
+    nombre: "Desinfectante multiusos", 
+    marca: "Lysol", 
+    categoria: "Limpieza", 
+    precio: "$120" 
+  },
+  { 
+    id: 110, 
+    nombre: "Limpiador de pisos", 
+    marca: "Mr. Proper", 
+    categoria: "Limpieza", 
+    precio: "$180" 
+  },
+  { 
+    id: 111, 
+    nombre: "Detergente en polvo", 
+    marca: "Omo", 
+    categoria: "Limpieza", 
+    precio: "$200" 
+  },
+  { 
+    id: 112, 
+    nombre: "Esponja de cocina", 
+    marca: "Scotch-Brite", 
+    categoria: "Limpieza", 
+    precio: "$40" 
+  },
+  { 
+    id: 113, 
+    nombre: "Desodorante ambiental", 
+    marca: "Glade", 
+    categoria: "Limpieza", 
+    precio: "$70" 
+  },
+  { 
+    id: 114, 
+    nombre: "Pañuelos de papel", 
+    marca: "Kleenex", 
+    categoria: "Limpieza", 
+    precio: "$90" 
+  },
+  { 
+    id: 115, 
+    nombre: "Limpiador de baños", 
+    marca: "Cif", 
+    categoria: "Limpieza", 
+    precio: "$150" 
+  },
+  { 
+    id: 116, 
+    nombre: "Toallas de papel", 
+    marca: "Scott", 
+    categoria: "Limpieza", 
+    precio: "$120" 
+  },
+  { 
+    id: 117, 
+    nombre: "Limpiador de vidrios", 
+    marca: "Spartan", 
+    categoria: "Limpieza", 
+    precio: "$100" 
+  },
+  { 
+    id: 118, 
+    nombre: "Lavandina", 
+    marca: "Ayudín", 
+    categoria: "Limpieza", 
+    precio: "$60" 
+  },
+  { 
+    id: 119, 
+    nombre: "Guantes de limpieza", 
+    marca: "Mapa", 
+    categoria: "Limpieza", 
+    precio: "$80" 
+  },
+  { 
+    id: 120, 
+    nombre: "Papel higiénico", 
+    marca: "Scottex", 
+    categoria: "Limpieza", 
+    precio: "$110" 
+  },
+  { 
+    id: 121, 
+    nombre: "Quitamanchas", 
+    marca: "Vanish", 
+    categoria: "Limpieza", 
+    precio: "$130" 
+  },
+  { 
+    id: 122, 
+    nombre: "Abrillantador para pisos", 
+    marca: "Brillante", 
+    categoria: "Limpieza", 
+    precio: "$160" 
+  },
+  { 
+    id: 123, 
+    nombre: "Desengrasante", 
+    marca: "Ajax", 
+    categoria: "Limpieza", 
+    precio: "$90" 
+  },
+  { 
+    id: 124,
+    marca:'El kg.', 
+    nombre: "Pan francés", 
+    categoria: "Panadería", 
+    precio: '$ 50' 
+  },
+  { 
+    id: 125,
+    marca:'El kg.', 
+    nombre: "Medialunas", 
+    categoria: "Panadería", 
+    precio: '$ 30' 
+  },
+  {
+    id: 126,
+    marca:'El kg.', 
+    nombre: "Facturas", 
+    categoria: "Panadería", 
+    precio: '$ 40' 
+  },
+  { 
+    id: 127,
+    marca:'El kg.', 
+    nombre: "Baguette", 
+    categoria: "Panadería", 
+    precio: '$ 60' 
+  },
+  { 
+    id: 128,
+    marca:'El kg.', 
+    nombre: "Croissants", 
+    categoria: "Panadería", 
+    precio: '$ 35' 
+  },
+  { 
+    id: 129,
+    marca:'El kg.', 
+    nombre: "Panes integrales", 
+    categoria: "Panadería", 
+    precio: '$ 55' 
+  },
+  { 
+    id: 130,
+    marca:'El kg.', 
+    nombre: "Bollos de canela", 
+    categoria: "Panadería", 
+    precio: '$ 45' 
+  },
+  { 
+    id: 131,
+    marca:'El kg.', 
+    nombre: "Rosquillas", 
+    categoria: "Panadería", 
+    precio: '$ 25' 
+  },
+  { 
+    id: 132,
+    marca:'El kg.', 
+    nombre: "Pan de centeno", 
+    categoria: "Panadería", 
+    precio: '$ 65' 
+  },
+  { 
+    id: 133,
+    marca:'El kg.', 
+    nombre: "Muffins", 
+    categoria: "Panadería", 
+    precio: '$ 40' 
+  },
+  { 
+    id: 134,
+    marca:'El kg.', 
+    nombre: "Pretzels", 
+    categoria: "Panadería", 
+    precio: '$ 30' 
+  }, 
+  {
+    id: 135,
+    marca:'El kg.', 
+    nombre: "Pan de maíz", 
+    categoria: "Panadería", 
+    precio: '$ 50' 
+  },
+  { 
+    id: 136,
+    marca:'El kg.', 
+    nombre: "Donas", 
+    categoria: "Panadería", 
+    precio: '$ 35' 
+  },
+  { 
+    id: 137,
+    marca:'El kg.', 
+    nombre: "Pan de leche", 
+    categoria: "Panadería", 
+    precio: '$ 40' 
+  },
+  { 
+    id: 138,
+    marca:'El kg.', 
+    nombre: "Galletas", 
+    categoria: "Panadería", 
+    precio: '$ 30' 
+  },
+  { 
+    id: 139,
+    marca:'El kg.', 
+    nombre: "Tortas", 
+    categoria: "Panadería", 
+    precio: '$ 80' 
+  },
+  { 
+    id: 140,
+    marca:'El kg.', 
+    nombre: "Palmeritas", 
+    categoria: "Panadería", 
+    precio: '$ 25' 
+  },
+  { 
+    id: 141,
+    marca:'El kg.', 
+    nombre: "Panes especiales", 
+    categoria: "Panadería", 
+    precio: '$ 70' 
+  },
 ];
