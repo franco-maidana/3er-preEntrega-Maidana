@@ -5,11 +5,20 @@
   list-style-type: none;
 }
 
+header h1 {
+  text-align: center;
+}
+
 nav {
+  float: left;
   align-items: center;
   background-color: black;
   color: #fff;
   padding: 2px;
+}
+
+nav div h1 {
+  display: none;
 }
 
 .logo {
@@ -34,15 +43,16 @@ nav {
   display: block;
   width: 100%;
   padding: 5px;
-  background-color: #f2f2f2;
-  color: black;
+  /* background-color: orange; */
   text-decoration: none;
+  font-size: 15px;
+  color: black ;
   border-radius: 4px;
 }
 
 .nav-links li a:hover {
-  background-color: #062ddb;
-  color: white;
+  background-color: rgba(6, 6, 238, 0.915);
+  cursor: pointer;
 }
 
 .burger {
@@ -57,9 +67,22 @@ nav {
   margin: 5px;
 }
 
+article {
+  float: right;
+}
+
 @media screen and (max-width: 768px) {
+  header h1 {
+    display: none;
+  }
+
   nav {
+    float: none;
     background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  nav div h1 {
+    text-align: center;
   }
 
   .nav-links {
@@ -67,6 +90,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    display: none;
   }
 
   .nav-links li {
@@ -76,7 +100,7 @@ nav {
   }
 
   .nav-links li a {
-    display: block;
+    /* display: block; */
     width: 100%;
     padding: 8px 0;
     background-color: #f2f2f2;
@@ -92,5 +116,40 @@ nav {
 
   .burger {
     display: block;
+  }
+
+  article {
+    float: none;
+  }
+}
+
+/* media query acomodando img y texto */
+@media screen and (max-width: 768px) {
+  .chau {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: red;
+  }
+
+  .card-body {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .card-body h5 {
+    font-size: 40px;
+  }
+
+  .card-body h6 {
+    font-size: 25px;
+  }
+
+  .card-img-top {
+    width: 15rem;
+  }
+
+  .btn {
+    width: 35%;
   }
 }
