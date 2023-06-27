@@ -70,6 +70,75 @@ article {
   float: right;
 }
 
+.chau{
+  display: flex;
+}
+
+/* modal */
+/* modal-header  */
+.carrito{
+  display: flex;
+  justify-content: space-around;
+  background-color: #0a0909;
+  color: #fff;
+  width: 100%;
+}
+/* modal-header-title es el h1 */
+.tituloDelModal{
+  justify-self: start;
+}
+/* modal header button */
+.botonModal{
+  cursor: pointer;
+}
+/* modal content  es el producto seleccionado */
+.holaQueHace{}
+/* para que no se vea la barra de scrool  */
+.holaQueHace::-webkit-scrollbar{
+    display: none;
+}
+/* modal conteiner */
+.mostrandoCarro{
+  width: 70%;
+  margin: 0 10%;
+  max-height: 100vh;
+  color: #fff;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none;
+}
+
+.mostrandoCarro > .holaQueHace{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 10px;
+
+}
+
+.mostrandoCarro > div {
+  height: 120px;
+  width: 120px;
+}
+
+/* total content */
+.totalContent{
+  font-size: 18px;
+  /* padding: 20px; */
+  text-align: center;
+  /* padding-top: 20px; */
+}
+
+/* fin del modal */
+
 @media screen and (max-width: 768px) {
   header h1 {
     display: none;
