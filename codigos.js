@@ -1,5 +1,10 @@
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
+const verCarrito = document.getElementById('carrito');
+const mostrandoCarro = document.getElementById('mostrandoCarrito');
+
+
+
 
 burger.addEventListener('click', () => {
   if (nav.style.display === 'block') {
@@ -378,3 +383,38 @@ function mostrarProductosPanaderia() {
 let panaderiaBotton = document.getElementById('Panaderia');
 panaderiaBotton.addEventListener('click', mostrarProductosPanaderia);
 
+// escuchador de eventos en el carrito de compras 
+verCarrito.addEventListener('click', () => {
+  // creacion de un modal pri,eros creamos un div
+  const modalHeader = document.createElement('div');
+  modalHeader.className = 'carrito';
+  modalHeader.innerHTML = `
+    <h1 class='tituloDelModal'>Carrito</h1>
+  `;
+  mostrandoCarro.append(modalHeader);
+  // creando boton para salir 
+  const button = document.createElement('h1');
+  button.innerText = 'X';
+  button.className = 'botonModal';
+
+  modalHeader.append(button);
+
+
+  carrito.forEach((product) => {
+    let carritoContent = document.createElement('div');
+  carritoContent.className = 'holaQueHace'
+  carritoContent.innerHTML = `
+    <h5>${product.nombre}</h5>
+    <h6>${product.marca}</h6>
+    <p>${product.precio}</p>
+  `; 
+    mostrandoCarro.append(carritoContent);
+  });
+  // le sacamos con el .replace  el sigo $ y el '' para que quede el numero solo y pueda cumplir la funcion el reduce para ir sumando los precios del carrito
+  const totalAPagar = carrito.reduce((acu, pro) => acu + parseFloat(pro.precio.replace('$', '')), 0); 
+
+  const totalpag = document.createElement('div');
+  totalpag.className = 'totalContent';
+  totalpag.innerHTML = `Total a pagar: ${totalAPagar} `;
+  mostrandoCarro.append(totalpag);
+});
