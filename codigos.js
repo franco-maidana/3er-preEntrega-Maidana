@@ -1,5 +1,5 @@
 const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav-links');
+const nav = document.querySelector('nav-links');
 const verCarrito = document.getElementById('carrito');
 const mostrandoCarro = document.getElementById('mostrandoCarrito');
 
@@ -22,7 +22,7 @@ let carrito = [];
 
 for (const producto of productosAComprar) {
   let carta = document.createElement('div');
-  carta.className = 'hola card col-md-4';
+  carta.className = 'holaCard col-md-4';
   carta.innerHTML = `
     <div class="chau card">
     <img class="card-img-top" src="${producto.imagen}" alt="Card image cap">
@@ -43,9 +43,13 @@ for (const producto of productosAComprar) {
       marca: producto.marca,
       precio: producto.precio,
     });
-    console.log(carrito);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
   });
 };
+
+
+
+
 
 // filtrados
 
@@ -397,20 +401,26 @@ verCarrito.addEventListener('click', () => {
   button.innerText = 'X';
   button.className = 'botonModal';
 
+  button.addEventListener('click', () => {
+    mostrandoCarro.innerHTML = ''; // Elimina el contenido del modal
+  });
+
   modalHeader.append(button);
 
 
-  carrito.forEach((product) => {
-    let carritoContent = document.createElement('div');
-  carritoContent.className = 'holaQueHace'
+carrito.forEach((product) => {
+  let carritoContent = document.createElement('div');
+  carritoContent.className = 'holaQueHace';
   carritoContent.innerHTML = `
     <h5>${product.nombre}</h5>
     <h6>${product.marca}</h6>
     <p>${product.precio}</p>
-  `; 
-    mostrandoCarro.append(carritoContent);
-  });
-  // le sacamos con el .replace  el sigo $ y el '' para que quede el numero solo y pueda cumplir la funcion el reduce para ir sumando los precios del carrito
+  `;
+  mostrandoCarro.appendChild(carritoContent);
+});
+  
+  // le sacamos con el .replace  el sigo $ y el '' del array, para que quede el numero solo y pueda cumplir la funcion.
+  // el reduce para ir sumando los precios del carrito
   const totalAPagar = carrito.reduce((acu, pro) => acu + parseFloat(pro.precio.replace('$', '')), 0); 
 
   const totalpag = document.createElement('div');
