@@ -15,7 +15,9 @@ const categorias = document.querySelectorAll('.nav-links'); // Selecciona todos 
 
 categorias.forEach(categoria => {
   categoria.addEventListener('click', () => {
-    nav.style.display = 'none'; // Oculta el menú al hacer clic en una categoría
+    if (window.innerWidth < 768) { // Verifica si el ancho de la ventana es menor que 768px (umbral para dispositivos móviles)
+      nav.style.display = 'none'; // Oculta el menú al hacer clic en una categoría solo en dispositivos móviles
+    }
   });
 });
 // cartas 
