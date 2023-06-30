@@ -20,6 +20,11 @@ let productosMostrados = document.getElementById('cartas');
 
 let carrito = [];
 
+// Verificar si hay un carrito guardado en el almacenamiento local
+if (localStorage.getItem("carrito")) {
+  carrito = JSON.parse(localStorage.getItem("carrito"));
+}
+
 for (const producto of productosAComprar) {
   let carta = document.createElement('div');
   carta.className = 'holaCard col-md-4';
@@ -48,13 +53,8 @@ for (const producto of productosAComprar) {
 };
 
 
-
-
-
 // filtrados
-
 // funcion para mostrar el filtrado y los productos 
-
 function mostrarProductosBazar() {
   // Borrar cualquier producto existente
   productosMostrados.innerHTML = '';
@@ -89,7 +89,7 @@ function mostrarProductosBazar() {
         marca: producto.marca,
         precio: producto.precio,
       });
-      console.log(carrito);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
   }
 }
@@ -133,7 +133,7 @@ function mostrarProductosAlmacen() {
         marca: producto.marca,
         precio: producto.precio,
       });
-      console.log(carrito);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
   }
 }
@@ -174,7 +174,7 @@ function mostrarProductosBebidas() {
         marca: producto.marca,
         precio: producto.precio,
       });
-      console.log(carrito);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
   }
 }
@@ -215,7 +215,7 @@ function mostrarProductosCongelados() {
         marca: producto.marca,
         precio: producto.precio,
       });
-      console.log(carrito);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
   }
 }
@@ -256,7 +256,7 @@ function mostrarProductosFiabres() {
         marca: producto.marca,
         precio: producto.precio,
       });
-      console.log(carrito);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
   }
 }
@@ -297,7 +297,7 @@ function mostrarProductosVerduleria() {
         marca: producto.marca,
         precio: producto.precio,
       });
-      console.log(carrito);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
   }
 }
@@ -338,7 +338,7 @@ function mostrarProductosLimpieza() {
         marca: producto.marca,
         precio: producto.precio,
       });
-      console.log(carrito);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
   }
 }
@@ -379,7 +379,7 @@ function mostrarProductosPanaderia() {
         marca: producto.marca,
         precio: producto.precio,
       });
-      console.log(carrito);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
     });
   }
 }
@@ -389,42 +389,53 @@ panaderiaBotton.addEventListener('click', mostrarProductosPanaderia);
 
 // escuchador de eventos en el carrito de compras 
 verCarrito.addEventListener('click', () => {
-  // creacion de un modal pri,eros creamos un div
+  // Creación de un modal, primero creamos un div
   const modalHeader = document.createElement('div');
   modalHeader.className = 'carrito';
   modalHeader.innerHTML = `
     <h1 class='tituloDelModal'>Carrito</h1>
   `;
   mostrandoCarro.append(modalHeader);
-  // creando boton para salir 
+  // Creando botón para salir
   const button = document.createElement('h1');
   button.innerText = 'X';
   button.className = 'botonModal';
-
   button.addEventListener('click', () => {
     mostrandoCarro.innerHTML = ''; // Elimina el contenido del modal
   });
-
   modalHeader.append(button);
-
-
-carrito.forEach((product) => {
-  let carritoContent = document.createElement('div');
-  carritoContent.className = 'holaQueHace';
-  carritoContent.innerHTML = `
-    <h5>${product.nombre}</h5>
-    <h6>${product.marca}</h6>
-    <p>${product.precio}</p>
-  `;
-  mostrandoCarro.appendChild(carritoContent);
-});
-  
-  // le sacamos con el .replace  el sigo $ y el '' del array, para que quede el numero solo y pueda cumplir la funcion.
-  // el reduce para ir sumando los precios del carrito
-  const totalAPagar = carrito.reduce((acu, pro) => acu + parseFloat(pro.precio.replace('$', '')), 0); 
-
+  let totalAPagar = 0; // Variable para almacenar el total a pagar
+  carrito.forEach((product, index) => {
+    let carritoContent = document.createElement('div');
+    carritoContent.className = 'holaQueHace';
+    carritoContent.innerHTML = `
+      <h5>${product.nombre}</h5>
+      <h6>${product.marca}</h6>
+      <p>${product.precio}</p>
+      <button class="quitarProducto" data-index="${index}">Quitar</button>
+    `;
+    mostrandoCarro.appendChild(carritoContent);
+    totalAPagar += parseFloat(product.precio.replace('$', '')); // Actualizar el total a pagar
+  });
   const totalpag = document.createElement('div');
   totalpag.className = 'totalContent';
   totalpag.innerHTML = `Total a pagar: ${totalAPagar} `;
   mostrandoCarro.append(totalpag);
+  // Agregar evento de clic a los botones "Quitar"
+  const quitarBotones = document.querySelectorAll('.quitarProducto');
+  quitarBotones.forEach((boton) => {
+    boton.addEventListener('click', (event) => {
+      const index = event.target.dataset.index;
+      const precioProducto = parseFloat(carrito[index].precio.replace('$', ''));
+      carrito.splice(index, 1); // Eliminar el producto del carrito
+      event.target.parentElement.remove(); // Eliminar el elemento del DOM sin cerrar el modal
+      totalAPagar -= precioProducto; // Restar el precio del producto eliminado al total a pagar
+      totalpag.innerHTML = `Total a pagar: ${totalAPagar} `; // Actualizar el total a pagar en el modal
+      // Actualizar los botones "Quitar" con los nuevos índices
+      const nuevosBotones = document.querySelectorAll('.quitarProducto');
+      nuevosBotones.forEach((nuevoBoton, newIndex) => {
+        nuevoBoton.dataset.index = newIndex;
+      });
+    });
+  });
 });
