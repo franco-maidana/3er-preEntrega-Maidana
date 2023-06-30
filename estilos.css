@@ -238,6 +238,7 @@ article {
     align-items: center;
     justify-content: center;
     display: none;
+    transition: display 0.5s ease;
   }
 
   .nav-links li {
