@@ -1,10 +1,7 @@
 const burger = document.querySelector('.burger');
-const nav = document.querySelector('nav-links');
+const nav = document.querySelector('.nav-links');
 const verCarrito = document.getElementById('carrito');
 const mostrandoCarro = document.getElementById('mostrandoCarrito');
-
-
-
 
 burger.addEventListener('click', () => {
   if (nav.style.display === 'block') {
@@ -14,6 +11,13 @@ burger.addEventListener('click', () => {
   }
 });
 
+const categorias = document.querySelectorAll('.nav-links'); // Selecciona todos los botones de categoría
+
+categorias.forEach(categoria => {
+  categoria.addEventListener('click', () => {
+    nav.style.display = 'none'; // Oculta el menú al hacer clic en una categoría
+  });
+});
 // cartas 
 
 let productosMostrados = document.getElementById('cartas');
